@@ -1,0 +1,203 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.teamManager {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .subtitle {
+    color: #7f8c8d;
+  }
+
+  .count {
+    color: #27ae60;
+    font-weight: bold;
+  }
+
+  .noData {
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    color: #856404;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  .teamTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+    th {
+      padding: 12px;
+      text-align: left;
+      background: #34495e;
+      color: white;
+      border: 1px solid #2c3e50;
+    }
+
+    td {
+      padding: 12px;
+      border: 1px solid #ecf0f1;
+    }
+
+    tr {
+      border-bottom: 1px solid #ecf0f1;
+    }
+  }
+
+  .managedBranch {
+    background: #e8f5e8 !important;
+  }
+
+  .editButton {
+    padding: 8px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 100%;
+
+    &:hover {
+      background: #2980b9;
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+
+  .modalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .formGroup {
+    margin-bottom: 15px;
+  }
+
+  .formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .formField {
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    input {
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #bdc3c7;
+      border-radius: 4px;
+    }
+  }
+
+  .note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+  }
+
+  .modalActions {
+    margin-top: 25px;
+    text-align: right;
+  }
+
+  .cancelButton {
+    padding: 10px 20px;
+    background: #95a5a6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+
+    &:hover {
+      background: #7f8c8d;
+    }
+  }
+
+  .saveButton {
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background: #219a52;
+    }
+
+    &:disabled {
+      background: #95a5a6;
+      cursor: not-allowed;
+    }
+  }
+
+  .message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+
+    &.info {
+      color: #2980b9;
+      background: #d6eaf8;
+      border: 1px solid #3498db;
+    }
+
+    &.success {
+      color: #27ae60;
+      background: #d5f4e6;
+      border: 1px solid #2ecc71;
+    }
+
+    &.error {
+      color: #e74c3c;
+      background: #fadbd8;
+      border: 1px solid #e74c3c;
+    }
+  }
+
+  .error {
+    padding: 20px;
+    color: #e74c3c;
+    background: #fadbd8;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+  }
+}
